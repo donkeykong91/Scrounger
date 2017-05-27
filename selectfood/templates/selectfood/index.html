@@ -1,7 +1,7 @@
 {% if food_list %}
   <ul>
     {% for food in food_list %}
-      <li> {{ food.food_name }} </li>
+      <li><a href="{% url 'selectfood:events' food.id %}">{{ food.food_name }}</a></li>
     {% endfor %}
   </ul>
 {% else %}

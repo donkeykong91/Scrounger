@@ -1,0 +1,8 @@
+<h1>{{ food.food_name }}</h1>
+
+{% if error_message %} <p><strong>{{ error_message }}</strong></p>{% endif %}
+
+{% for event in food.event_set.all %}
+  <p>{{ event.event_location }}</p>
+  <p>{{ event.event_date_time }}</p>
+{% endfor %}
